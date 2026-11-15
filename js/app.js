@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id), db=()=>window.ruyaSupabase;
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const nice=s=>String(s||"").replace(/[_-]/g," ").replace(/\b\w/g,c=>c.toUpperCase());
 let user=null,profile=null,page="Overview",selectedCourseId=null;
-const menus={student:["Overview","GED programme & schedule","Course catalogue","Live classes","Assignments","Attendance","GED library","Community chat","Fees & payments","Notifications","Announcements","Messages"],teacher:["Overview","GED programme & schedule","My GED classes","Teaching schedule","Assignments & grading","Attendance register","GED learning resources","Fees & payments","Community chat","Notifications","Announcements","Messages"],management:["Overview","GED programme & schedule","GED programs","People & roles","Timetables","Academic records","GED library","Community chat","Fees & payments","Notifications","Announcements","Messages"]};
+const menus={student:["Overview","GED programme & schedule","Course catalogue","English courses","Live classes","Assignments","Attendance","GED library","Community chat","Fees & payments","Notifications","Announcements","Messages"],teacher:["Overview","GED programme & schedule","My GED classes","Teaching schedule","Assignments & grading","Attendance register","GED learning resources","Fees & payments","Community chat","Notifications","Announcements","Messages"],management:["Overview","GED programme & schedule","GED programs","English courses","People & roles","Timetables","Academic records","GED library","Community chat","Fees & payments","Notifications","Announcements","Messages"]};
 function toast(s){const e=$("toast");e.textContent=s;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),3200)}
 let authSignup=false,authReturnFocus=null,recoveryMode=false,pendingPage=null;
 function close(){ $("loginModal").classList.remove("show");$("authPassword").value="";$("authError").textContent="";if(authReturnFocus&&typeof authReturnFocus.focus==="function")authReturnFocus.focus(); }
@@ -63,6 +63,7 @@ async function render(p){
   if(p==="Overview")b=await overview();
    else if(p==="GED programme & schedule")b=programmeSchedule();
   else if(["My courses","Course catalogue","GED study plan","Academic programs","GED programs"].includes(p))b=await courses();
+  else if(p==="English courses")b=await courses("English Language");
    else if(p==="Course details")b=await courseContent();
   else if(["Class schedule","Live classes","Teaching schedule","Timetables","My classes","My GED classes"].includes(p))b=await classes();
   else if(["Assignments","Assignments & grading"].includes(p))b=await assignments();
@@ -121,7 +122,7 @@ async function overview(){
  }
  return '<div class="portal-hero"><small>SECURE AUREVIA WORKSPACE</small><h2>Welcome, '+esc(profile.full_name||"AUREVIA member")+'.</h2><p>Your account is connected. Information shown here is restricted by your role.</p></div><div class="workspace-stats">'+stats.map(x=>'<div class="workspace-stat"><div class="stat-top">'+esc(x[0])+'</div><strong>'+x[1]+'</strong><small>Live database count</small></div>').join("")+'</div>'+panel("Recent activity",activity||empty("No activity yet."));
 }
-async function courses(){
+async function courses(categoryFilter){
  if(profile.role==="student"){
   const [catalog,owned,invoices]=await Promise.all([
    db().from("courses").select("id,code,title,title_dari,description,description_dari,level,category,access_type,price_amount,currency,price_afn,price_usd,ged_subject_id").eq("is_published",true).order("category").order("title"),
@@ -129,6 +130,7 @@ async function courses(){
    db().from("fee_invoices").select("id,enrollment_id,status").eq("student_id",user.id)
   ]);
   if(catalog.error)throw catalog.error;if(owned.error)throw owned.error;if(invoices.error)throw invoices.error;
+  if(categoryFilter)catalog.data=(catalog.data||[]).filter(c=>c.category===categoryFilter);
   const registrations=new Map((owned.data||[]).map(x=>[x.course_id,x]));
   const invoicesByEnrollment=new Map((invoices.data||[]).filter(x=>x.enrollment_id).map(x=>[x.enrollment_id,x]));
   const cards=(catalog.data||[]).map(c=>{
@@ -143,8 +145,9 @@ async function courses(){
   if(!profile.country)setTimeout(()=>bind("countryForm",async f=>{const v=formData(f);const q=await db().rpc("set_my_country",{_country:v.country.trim()});if(q.error)throw q.error;profile.country=v.country.trim();toast("Country saved. Your regional course fee is now applied.");render("Course catalogue")}),0);
   return countryForm+'<div class="catalog-intro"><h2 class="workspace-page-title">Explore AUREVIA courses</h2><p class="workspace-page-intro">Browse the available programmes and register. Paid courses unlock live classes after management verifies your payment.</p></div><div class="catalog-grid">'+cards+'</div>'+panel("My registrations",my);
  }
- const r=profile.role==="management"?await db().from("courses").select("*").eq("is_published",true).order("created_at",{ascending:false}):await db().from("class_sections").select("title,courses!inner(id,title,code,ged_subject_id,is_published)").eq("teacher_id",user.id).eq("courses.is_published",true);
+ let r=profile.role==="management"?await db().from("courses").select("*").eq("is_published",true).order("created_at",{ascending:false}):await db().from("class_sections").select("title,courses!inner(id,title,code,ged_subject_id,is_published)").eq("teacher_id",user.id).eq("courses.is_published",true);
  if(r.error)throw r.error;
+ if(categoryFilter&&profile.role==="management")r.data=(r.data||[]).filter(c=>c.category===categoryFilter);
  let form=profile.role==="management"?'<form class="live-form" id="courseFeeForm"><h3>Set course fees and payment details</h3><label class="live-field">Course<select name="course_id">'+(r.data||[]).map(x=>'<option value="'+x.id+'">'+esc(x.title)+' · '+(x.price_afn!=null?esc(x.price_afn)+" AFN / "+esc(x.price_usd)+" USD":"Fee not set")+'</option>').join("")+'</select></label>'+field("Afghanistan fee (AFN, maximum 300)","price_afn","number")+field("International fee (USD)","price_usd","number")+'<label class="live-field">Currency<select name="currency"><option value="AFN">AFN</option><option value="USD">USD</option></select></label><label class="live-field">Payment instructions<textarea name="payment_instructions" rows="3" placeholder="Payment methods and instructions will be provided here." required>USDT (TRC20): THmcuNkiZfm7ijZ9pbD9vSJopfmrwbGp84\nVisa card: Availability depends on your country and supported payment provider. Message AUREVIA Management if unavailable.\nIn-person payment: Message AUREVIA Management to arrange payment.\nFor USDT, send only on the TRON (TRC20) network. Include your transaction hash when submitting payment. Use this method only where legally permitted.</textarea></label><label class="live-field">Payment due in days<input name="payment_due_days" type="number" min="1" max="30" value="7" required></label><button class="btn btn-green">Save fee and payment details</button></form>':"";
  if(profile.role==="management")setTimeout(()=>bind("courseFeeForm",async f=>{
   const v=formData(f),afn=Number(v.price_afn),usd=Number(v.price_usd),days=Number(v.payment_due_days);
