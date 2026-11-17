@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suliman7surkhrody-oss.github.io/aurevia-ged-academy/sitemap.xml
