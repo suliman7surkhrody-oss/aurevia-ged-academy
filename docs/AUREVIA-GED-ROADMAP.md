@@ -8,7 +8,7 @@
 - AUREVIA is an independent GED preparation platform and is not affiliated with GED Testing Service.
 
 ## Implemented foundations
-- Rebranded public site and workspace from RU'YA to AUREVIA
+- Established AUREVIA as the sole public academy brand
 - Added original SVG emblem and updated metadata/favicon
 - Added language switching, Dari typography and RTL layout support
 - Added public GED subject catalogue with the four current test subjects
