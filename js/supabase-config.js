@@ -1,4 +1,4 @@
-/* RU'YA Demo Supabase public settings.
+/* AUREVIA GED Academy Supabase public settings.
    Legacy anon key is browser-safe when paired with the database's RLS policies.
    Never place a service-role or secret key in this file. */
 window.RUYA_SUPABASE_CONFIG = {
