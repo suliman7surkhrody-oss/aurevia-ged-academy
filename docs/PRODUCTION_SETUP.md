@@ -1,10 +1,10 @@
-# RU'YA platform — production activation
+# AUREVIA GED Academy platform — production activation
 
 The repository now contains the first production backend foundation. The public website is still hosted on GitHub Pages; authentication and private academic data are provided by Supabase.
 
 ## 1. Create the backend
 
-1. Create a Supabase project owned by RU'YA (not a personal test project).
+1. Create a Supabase project owned by AUREVIA GED Academy (not a personal test project).
 2. Choose a strong database password and keep it in the organization's password manager.
 3. In **SQL Editor**, run `supabase/migrations/20261102000100_initial_platform.sql`.
 4. In **Project Settings → API**, copy the Project URL and anon/publishable key.
@@ -23,7 +23,7 @@ Public registration always creates a **student** account. It cannot choose teach
 ```sql
 update public.profiles
 set role = 'management'
-where lower(email) = lower('ADMIN_EMAIL_CONFIRMED_BY_RUYA');
+where lower(email) = lower('ADMIN_EMAIL_CONFIRMED_BY_AUREVIA');
 ```
 
 Replace the example with the approved administrator email. Verify the row before proceeding. Do not promote an account without the organization's authorization.
@@ -36,7 +36,7 @@ Management can then assign teacher roles and activate staff accounts. Do not sha
 - Enable email confirmation.
 - Set a clear password policy and review session settings.
 - Test sign-up, confirmation, sign-in, sign-out, password reset and disabled-account handling.
-- Use a RU'YA-controlled sender domain and verified email provider.
+- Use a AUREVIA-controlled sender domain and verified email provider.
 
 ## 4. Data protection and operations
 
@@ -53,7 +53,7 @@ Management can then assign teacher roles and activate staff accounts. Do not sha
 | Area | Status |
 |---|---|
 | Public website and responsive design | Live preview |
-| Database schema and row-level security | Migration prepared; must be applied to RU'YA's Supabase project |
+| Database schema and row-level security | Migration prepared; must be applied to AUREVIA's Supabase project |
 | Browser authentication client | Ready for project URL/key |
 | Real user accounts | Authentication UI is implemented; requires Supabase project activation and email configuration |
 | Courses, sections, enrollments, sessions | Live portal workflows implemented; requires database activation |
