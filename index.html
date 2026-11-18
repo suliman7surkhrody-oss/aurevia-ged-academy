@@ -1083,6 +1083,49 @@ body[data-theme="dark"] .book-icon{background:#30465c!important;color:#d4dfeb!im
 @media(max-width:600px){.semester-notice{margin:14px 15px 0;padding:14px;align-items:flex-start}.semester-notice h2{font-size:14px}}
 [data-theme="dark"] .semester-notice{background:#172f2a;border-color:#315c4b;color:#effaf3;box-shadow:none}
 [data-theme="dark"] .semester-notice p,[data-theme="dark"] .semester-notice .notice-dari{color:#c5e2d1}
+
+/* December intake: public live-class cards and day-only countdown */
+.intake-section{background:#f3f1e9;padding:70px 26px}
+.intake-wrap{max-width:1180px;margin:auto}
+.intake-heading{display:grid;grid-template-columns:minmax(0,1fr) 205px;gap:25px;align-items:center;margin-bottom:25px}
+.intake-heading .eyebrow{color:var(--green)}
+.intake-heading h2{font:800 clamp(27px,3vw,38px)/1.15 Manrope;color:#24473d;letter-spacing:-.035em;margin:12px 0}
+.intake-heading p{max-width:720px;color:#718078;font-size:13px;line-height:1.75;margin:0}
+.intake-countdown{background:#fff;border:1px solid #e3e2d7;border-radius:18px;padding:17px;text-align:center;box-shadow:0 9px 24px rgba(35,64,50,.05)}
+.countdown-label{display:block;font-size:9px;font-weight:800;letter-spacing:.17em;color:#7b8a80}
+.intake-countdown strong{display:block;font:800 54px/1 Manrope;color:#245b49;margin:8px 0 3px;font-variant-numeric:tabular-nums}
+.intake-countdown>b{font:800 10px Manrope;letter-spacing:.16em;color:#a06e4e}
+.intake-countdown small{display:block;color:#849087;font-size:9px;margin-top:8px}
+.intake-class-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.intake-class-card{background:#fff;border:1px solid #e4e3d9;border-radius:17px;padding:21px;display:flex;flex-direction:column;min-height:300px;box-shadow:0 8px 22px rgba(35,64,50,.035)}
+.intake-card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:9px;font-weight:800;letter-spacing:.1em;color:#6c7c71}
+.intake-pill{background:#edf2ec;color:#426a55;border-radius:30px;padding:7px 9px;white-space:nowrap}
+.intake-pill.free{background:#e8f5ed;color:#24724e}
+.intake-class-card h3{font:800 18px/1.3 Manrope;color:#28493e;margin:17px 0 8px}
+.intake-class-card p{font-size:12px;line-height:1.7;color:#748178;margin:0 0 17px}
+.intake-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding:13px 0;border-top:1px solid #edf0e9;border-bottom:1px solid #edf0e9}
+.intake-meta small{display:block;font-size:8px;letter-spacing:.1em;color:#8b988e;margin-bottom:5px}
+.intake-meta b{font-size:10px;color:#405b4d}
+.intake-card-action{padding-top:14px}
+.intake-card-action .btn{width:100%}
+.intake-card-action small{display:block;font-size:9px;line-height:1.5;color:#89948b;margin-top:8px}
+.intake-join-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;background:#e6eee7;border:1px solid #d8e3d9;border-radius:15px;padding:17px 19px;margin-top:15px}
+.intake-join-bar b,.intake-join-bar span{display:block}
+.intake-join-bar b{font:800 13px Manrope;color:#294b3e;margin-bottom:4px}
+.intake-join-bar span{font-size:11px;line-height:1.6;color:#687b70}
+.intake-join-bar .btn{white-space:nowrap}
+.intake-footnote{font-size:10px;line-height:1.7;color:#818b81;margin:14px 2px 0}
+[data-theme="dark"] .intake-section{background:#17251f}
+[data-theme="dark"] .intake-heading h2{color:#e2eee6}
+[data-theme="dark"] .intake-heading p,[data-theme="dark"] .intake-footnote{color:#a7b7ab}
+[data-theme="dark"] .intake-countdown,[data-theme="dark"] .intake-class-card{background:#21332a;border-color:#354a3d}
+[data-theme="dark"] .intake-class-card h3,[data-theme="dark"] .intake-meta b{color:#e2eee6}
+[data-theme="dark"] .intake-class-card p,[data-theme="dark"] .intake-meta small{color:#a9b9ac}
+[data-theme="dark"] .intake-join-bar{background:#263b30;border-color:#3b5344}
+[data-theme="dark"] .intake-join-bar b{color:#e2eee6}
+[data-theme="dark"] .intake-join-bar span{color:#b1c1b5}
+@media(max-width:850px){.intake-class-grid{grid-template-columns:1fr 1fr}.intake-heading{grid-template-columns:minmax(0,1fr) 170px}}
+@media(max-width:600px){.intake-section{padding:52px 18px}.intake-heading{grid-template-columns:1fr}.intake-countdown{max-width:100%;display:grid;grid-template-columns:1fr auto auto;align-items:center;text-align:left;gap:10px}.intake-countdown strong{font-size:38px;margin:0}.intake-countdown>b{font-size:9px}.intake-countdown small{grid-column:1/-1;margin-top:0}.intake-class-grid{grid-template-columns:1fr}.intake-class-card{min-height:0}.intake-join-bar{align-items:stretch;flex-direction:column}.intake-join-bar .btn{width:100%}}
 </style>
 </style>
 </head>
@@ -1090,12 +1133,27 @@ body[data-theme="dark"] .book-icon{background:#30465c!important;color:#d4dfeb!im
 <div class="shell" id="publicSite">
 <header class="topbar">
  <div class="brand"><img class="brand-mark" src="assets/aurevia-mark.svg" alt="AUREVIA emblem"><div class="brandname">AUREVIA<small>GED ACADEMY</small></div></div>
- <nav class="nav"><a href="#about">About</a><a href="#whatsapp-community">Community</a><a href="#ged-courses">GED courses</a><a href="#english-courses">English courses</a><a href="#programme">Programme & schedule</a><a href="#how-it-works">How it works</a></nav>
+ <nav class="nav"><a href="#about">About</a><a href="#whatsapp-community">Community</a><a href="#ged-courses">GED courses</a><a href="#english-courses">English courses</a><a href="#live-classes">Live classes</a><a href="#programme">Programme & schedule</a><a href="#how-it-works">How it works</a></nav>
  <div class="top-actions"><button class="theme-toggle" type="button" onclick="aureviaToggleTheme()" id="themeTogglePublic" aria-pressed="false">Dark mode</button><button class="lang-toggle" type="button" onclick="aureviaToggleLanguage()" aria-label="Change language">دری</button><button class="btn btn-outline" onclick="ruyaShowLogin('signup')">Create account</button><button class="btn btn-green" onclick="ruyaShowLogin('signin')">Sign in ↗</button></div>
 </header>
 <div class="semester-notice" id="semesterStartNotice" role="status" aria-live="polite"><div class="notice-icon" aria-hidden="true">📢</div><div><h2>New Semester Begins — December 1, 2026</h2><p>GED preparation and two new English classes (AEFB 1 &amp; AEFB 2) begin on December 1, 2026. Both English classes are completely free. Exact class times will be announced separately.</p><span class="notice-dari" lang="fa" dir="rtl">صنف‌های آمادگی GED و دو صنف جدید انگلیسی (AEFB 1 و AEFB 2) به تاریخ اول دسامبر ۲۰۲۶ آغاز می‌شوند. هر دو صنف انگلیسی کاملاً رایگان است. زمان دقیق صنف‌ها بعداً اعلام می‌شود.</span></div></div>
 <main><section class="hero" id="home"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">AUREVIA GED ACADEMY · OFFICIAL WEBSITE</div><h1>Prepare for your GED.<br><span>Open new opportunities.</span></h1><p>AUREVIA GED Academy is an online learning platform that helps students prepare for the four GED subject tests through structured lessons, guided practice and teacher support.</p><div class="hero-ctas"><a class="btn btn-light" href="#ged-courses">Explore GED courses ↓</a><a class="btn btn-outline" href="#programme">View 6-month programme &amp; schedule ↓</a><button class="btn btn-outline" onclick="ruyaShowLogin('signin')">Sign in to your portal ↗</button></div><div class="hero-note">English and Dari learning support · Study online · Learn at your pace</div></div><div class="hero-visual" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit-core"><span>A</span><small>AUREVIA</small></div><div class="orbit-label label-top">LEARN</div><div class="orbit-label label-right">PRACTISE</div><div class="orbit-label label-bottom">PROGRESS</div><div class="orbit-label label-left">SUCCEED</div></div></div></section><section id="whatsapp-community" class="whatsapp-home" aria-label="AUREVIA WhatsApp community"><div class="whatsapp-community"><div class="whatsapp-community-copy"><div class="whatsapp-community-icon" aria-hidden="true">✆</div><div><h2>Join the AUREVIA WhatsApp Community</h2><p>Get academy announcements, course updates and important learning information in one place.</p><span class="whatsapp-dari" lang="fa" dir="rtl">برای دریافت اطلاعیه‌ها و معلومات اکادمی، به کمیونیتی واتساپ ما بپیوندید.</span></div></div><a class="btn" href="https://chat.whatsapp.com/I1vrkkbkVb46Z1R8IgQ5Xl" target="_blank" rel="noopener noreferrer">Join WhatsApp Community ↗</a></div></section><section class="section intro-section" id="about"><div class="intro-grid"><div><div class="eyebrow">ABOUT AUREVIA</div><h2>A focused online academy for GED preparation.</h2></div><div class="intro-copy"><p class="lead">AUREVIA GED Academy brings GED preparation, learning resources and student support together in one accessible online space.</p><p>Our goal is to make the GED journey clearer: understand what each subject covers, study with organised lessons, practise essential skills and receive guidance as you prepare for the exams.</p></div></div></section><section class="section ged-public-section" id="ged-courses"><div class="section-head"><div class="eyebrow">OUR GED COURSES</div><h2>Four subjects. One clear path.</h2><p>The GED credential is assessed through four subject tests. Explore each course and begin building the knowledge and skills it requires.</p></div><div class="ged-subject-grid" id="gedSubjectGrid"><p class="empty-state">Loading GED courses…</p></div><div class="ged-public-lessons" id="gedPublicLessons" hidden></div></section>
 <section class="section ged-public-section" id="english-courses"><div class="section-head"><div class="eyebrow">ENGLISH LANGUAGE PROGRAMMES</div><h2>Build your English, level by level.</h2><p>Choose a course that matches your current ability, from foundation English to advanced communication. A placement check can help you start at the right level.</p></div><div class="ged-subject-grid" id="englishCourseGrid"><p class="empty-state">Loading English courses…</p></div><div class="english-course-note"><b>Core coursebook: American English File (AEF)</b><span>Lessons use the American English File coursebook series, supported by speaking, listening, reading, writing, grammar and vocabulary practice.</span></div></section>
+<section class="intake-section" id="live-classes">
+ <div class="intake-wrap">
+  <div class="intake-heading">
+   <div><div class="eyebrow">DECEMBER 2026 INTAKE · ONLINE CLASSES</div><h2>Three live classes begin on 1 December.</h2><p>Register through the AUREVIA website. Once enrolled, sign in to your student portal and join your live lessons directly from the Live Classes area.</p></div>
+   <div class="intake-countdown" aria-live="polite"><span class="countdown-label">STARTS IN</span><strong id="intakeDays">13</strong><b id="intakeDaysLabel">DAYS</b><small id="intakeCountdownNote">Until 1 December 2026 · Kabul time</small></div>
+  </div>
+  <div class="intake-class-grid">
+   <article class="intake-class-card ged-intake"><div class="intake-card-top"><span>GED PROGRAMME</span><span class="intake-pill">LIVE ONLINE</span></div><h3>Complete GED Preparation</h3><p>One guided programme covering Mathematical Reasoning, Reasoning Through Language Arts, Science and Social Studies.</p><div class="intake-meta"><div><small>START DATE</small><b>1 December 2026</b></div><div><small>CLASS TIME</small><b>To be announced</b></div></div><div class="intake-card-action"><button class="btn btn-green" type="button" onclick="aureviaOpenPortal('Course catalogue','signup')">Register on the website ↗</button><small>Course fee and enrolment details are provided in the student portal.</small></div></article>
+   <article class="intake-class-card"><div class="intake-card-top"><span>ENGLISH · BOOK 1</span><span class="intake-pill free">100% FREE</span></div><h3>American English File 1</h3><p>Build a strong English foundation through grammar, vocabulary, pronunciation, speaking, listening, reading and writing.</p><div class="intake-meta"><div><small>START DATE</small><b>1 December 2026</b></div><div><small>CLASS TIME</small><b>To be announced</b></div></div><div class="intake-card-action"><button class="btn btn-green" type="button" onclick="aureviaOpenPortal('Course catalogue','signup')">Register for free ↗</button><small>Free enrolment is completed through your AUREVIA student account.</small></div></article>
+   <article class="intake-class-card"><div class="intake-card-top"><span>ENGLISH · BOOK 2</span><span class="intake-pill free">100% FREE</span></div><h3>American English File 2</h3><p>Develop stronger communication, fluency, grammar, vocabulary and confidence through structured English lessons.</p><div class="intake-meta"><div><small>START DATE</small><b>1 December 2026</b></div><div><small>CLASS TIME</small><b>To be announced</b></div></div><div class="intake-card-action"><button class="btn btn-green" type="button" onclick="aureviaOpenPortal('Course catalogue','signup')">Register for free ↗</button><small>Free enrolment is completed through your AUREVIA student account.</small></div></article>
+  </div>
+  <div class="intake-join-bar"><div><b>Already enrolled?</b><span>Sign in on the website. Your published lesson and secure Join Live Class link will appear in your student portal.</span></div><button class="btn btn-green" type="button" onclick="aureviaOpenPortal('Live classes','signin')">Sign in to join classes ↗</button></div>
+  <p class="intake-footnote">Exact class times and weekly English class days will be announced by AUREVIA management before lessons begin. The live meeting links will be added to the website; students will not need to search for separate links in group chats.</p>
+ </div>
+</section>
 <section class="programme-section" id="programme">
  <div class="programme-wrap">
   <div class="programme-hero">
@@ -1124,8 +1182,8 @@ body[data-theme="dark"] .book-icon{background:#30465c!important;color:#d4dfeb!im
    <p>Three programmes are available from 1 December 2026. All classes follow the academy teaching week: Saturday to Wednesday. Thursday and Friday are holidays. Exact class times will be announced separately.</p>
    <div class="schedule-table-wrap"><table class="schedule-table"><thead><tr><th>CLASS</th><th>COURSE / LEVEL</th><th>TEACHING DAYS</th><th>START DATE</th><th>FEE</th><th>TIME</th></tr></thead><tbody>
     <tr><td>GED Preparation</td><td>Mathematics, RLA, Science &amp; Social Studies</td><td>Saturday–Wednesday</td><td>1 December 2026</td><td>As announced by the academy</td><td>To be announced</td></tr>
-    <tr><td>English Class 1</td><td>American English File Book 1 (AEFB 1)</td><td>Saturday–Wednesday</td><td>1 December 2026</td><td><strong>FREE</strong></td><td>To be announced</td></tr>
-    <tr><td>English Class 2</td><td>American English File Book 2 (AEFB 2)</td><td>Saturday–Wednesday</td><td>1 December 2026</td><td><strong>FREE</strong></td><td>To be announced</td></tr>
+    <tr><td>English Class 1</td><td>American English File Book 1 (AEFB 1)</td><td>To be announced</td><td>1 December 2026</td><td><strong>FREE</strong></td><td>To be announced</td></tr>
+    <tr><td>English Class 2</td><td>American English File Book 2 (AEFB 2)</td><td>To be announced</td><td>1 December 2026</td><td><strong>FREE</strong></td><td>To be announced</td></tr>
     <tr><td>Thursday</td><td colspan="5" class="off-day">DAY OFF</td></tr>
     <tr><td>Friday</td><td colspan="5" class="off-day">DAY OFF</td></tr>
    </tbody></table></div>
@@ -1192,5 +1250,26 @@ body[data-theme="dark"] .book-icon{background:#30465c!important;color:#d4dfeb!im
 
 <script>
 (function(){var notice=document.getElementById("semesterStartNotice");if(!notice)return;try{var parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kabul",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());var d={};parts.forEach(function(p){d[p.type]=p.value});var today=d.year+"-"+d.month+"-"+d.day;if(today>"2026-12-01")notice.remove();}catch(e){var now=new Date();var kabul=new Date(now.toLocaleString("en-US",{timeZone:"Asia/Kabul"}));if(kabul.getFullYear()>2026||(kabul.getFullYear()===2026&&(kabul.getMonth()>11||(kabul.getMonth()===11&&kabul.getDate()>1))))notice.remove();}})();
+</script>
+<script>
+(function(){
+ const target={year:2026,month:12,day:1};
+ const dayEl=document.getElementById("intakeDays"),labelEl=document.getElementById("intakeDaysLabel"),noteEl=document.getElementById("intakeCountdownNote");
+ if(!dayEl||!labelEl||!noteEl)return;
+ function kabulDateParts(){
+  const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kabul",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());
+  const out={};parts.forEach(p=>out[p.type]=Number(p.value));return out;
+ }
+ function update(){
+  const today=kabulDateParts();
+  const todayUtc=Date.UTC(today.year,today.month-1,today.day);
+  const targetUtc=Date.UTC(target.year,target.month-1,target.day);
+  const days=Math.round((targetUtc-todayUtc)/86400000);
+  if(days>0){dayEl.textContent=String(days);labelEl.textContent=days===1?"DAY":"DAYS";noteEl.textContent="Until 1 December 2026 · Kabul time";}
+  else if(days===0){dayEl.textContent="0";labelEl.textContent="DAYS";noteEl.textContent="The December intake starts today.";}
+  else{dayEl.textContent="LIVE";labelEl.textContent="NOW";noteEl.textContent="The December intake has started.";}
+ }
+ update();setInterval(update,60000);
+})();
 </script>
 </body></html>
