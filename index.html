@@ -1128,6 +1128,172 @@ body[data-theme="dark"] .book-icon{background:#30465c!important;color:#d4dfeb!im
 @media(max-width:600px){.intake-section{padding:52px 18px}.intake-heading{grid-template-columns:1fr}.intake-countdown{max-width:100%;display:grid;grid-template-columns:1fr auto auto;align-items:center;text-align:left;gap:10px}.intake-countdown strong{font-size:38px;margin:0}.intake-countdown>b{font-size:9px}.intake-countdown small{grid-column:1/-1;margin-top:0}.intake-class-grid{grid-template-columns:1fr}.intake-class-card{min-height:0}.intake-join-bar{align-items:stretch;flex-direction:column}.intake-join-bar .btn{width:100%}}
 </style>
 </style>
+<style id="aurevia-unified-theme">
+/* AUREVIA unified palette — warm ivory, deep slate and restrained brass */
+:root{
+ --forest:#183B56;--green:#245B70;--mint:#E8EEF0;--lime:#D8C49A;
+ --ink:#1D2D3A;--muted:#667784;--paper:#F5F3EE;--white:#FFFFFF;
+ --line:#E4E0D7;--gold:#B58A4A;--shadow:0 14px 38px rgba(25,43,57,.08);
+ color-scheme:light;
+}
+html{background:var(--paper)}
+body{background:var(--paper)!important;color:var(--ink)!important}
+.topbar,.dashbar,.workspace-side,.feature,.portal,.library-row,.schedule-card,
+.intake-countdown,.intake-class-card,.workspace-card,.workspace-stat,.stat,.panel,
+.sidebar,.modal,.date-chip{background:#fff!important;color:var(--ink);border-color:var(--line)!important}
+.topbar{border-bottom:1px solid var(--line)!important}
+.brandname,.feature h3,.portal h3,.library-row h3,.card-heading h3,.activity-copy b,
+.workspace-page-title,.workspace-topline h1,.dashmain h1,.schedule-card h3,
+.intake-class-card h3,.intake-meta b,.intake-heading h2{color:#1D3446!important}
+.brandname small,.nav,.nav a,.sub,.welcome-sub,.feature p,.portal p,.library-row p,
+.section-head p,.intro-copy p,.purpose-secondary p,.principle p,.pathway p,
+.schedule-card p,.intake-class-card p,.intake-heading p,.intake-footnote,
+.intake-meta small,.activity-copy small,.workspace-page-intro,.stat span{color:#667784!important}
+.mark,.topbar .mark{background:#183B56!important;color:#F4EBDD!important;box-shadow:none!important}
+.nav a:hover,.portal .tag,.section-head .eyebrow,.intro-grid .eyebrow,
+.purpose-card .eyebrow,.workspace-topline .eyebrow,.intake-heading .eyebrow{color:#96713D!important}
+.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn{
+ background:#183B56!important;color:#fff!important;border:1px solid #183B56!important
+}
+.btn-green:hover,.btn.btn-green:hover{background:#245B70!important}
+.btn-light{background:#E8E2D5!important;color:#233B4C!important}
+.btn-outline{background:#fff!important;color:#183B56!important;border:1px solid #C9D0D3!important}
+.hero{background:linear-gradient(118deg,#142D43 0%,#1B4058 62%,#31586A 100%)!important;color:#fff!important}
+.hero h1,.hero h1 span,.hero .eyebrow{color:#fff!important}
+.hero h1 span{color:#E2C99B!important}
+.hero p{color:#E2E9ED!important}
+.hero-note{color:#D0DCE2!important}
+.hero-visual .orbit-core{background:#F0E8D8!important;color:#183B56!important}
+.visual{background:rgba(255,255,255,.09)!important;border-color:rgba(255,255,255,.2)!important}
+.portal-band,.purpose-section,.learning-section,.course-method{background:#ECE9E1!important}
+.intro-section,.section{background:transparent}
+.feature,.portal,.principle,.pathway,.schedule-card,.workspace-card,.workspace-stat{
+ box-shadow:0 8px 24px rgba(25,43,57,.045)!important;border:1px solid var(--line)!important
+}
+.feature-icon,.book-icon,.activity-icon,.workspace-stat .stat-icon,.workspace-nav .nav-ico{
+ background:#E9EEF0!important;color:#315B70!important
+}
+.principle{border-top:3px solid #B58A4A!important}
+.principle h3,.pathway h3,.purpose-secondary h2{color:#1D3B50!important}
+.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero{
+ background:linear-gradient(120deg,#18364D,#28566A)!important;color:#fff!important
+}
+.purpose-main h2,.purpose-main p,.purpose-main .eyebrow,
+.closing-section h2,.closing-section p,.programme-cta h3,.programme-cta p{color:#fff!important}
+.footer{background:#122638!important;color:#E9EEF0!important}
+.footer small{color:#C0CDD4!important}
+.intake-section{background:#ECE9E1!important}
+.intake-heading h2{color:#1D3446!important}
+.intake-countdown strong{color:#183B56!important}
+.countdown-label,.intake-countdown>b{color:#78613D!important}
+.intake-pill{background:#E9EEF0!important;color:#315B70!important}
+.intake-pill.free{background:#E5EFEA!important;color:#35634E!important}
+.intake-join-bar{background:#E4E9E5!important;border-color:#D4DDD7!important}
+.intake-join-bar b{color:#1D3B50!important}
+.intake-join-bar span{color:#596E78!important}
+.schedule-table th{background:#183B56!important;color:#fff!important}
+.schedule-table td{color:#536673!important;border-color:#E4E0D7!important}
+.off-day{color:#8A7048!important}
+.semester-notice{background:#F0EDE5!important;border-color:#DED5C4!important;border-left-color:#B58A4A!important;color:#263D4C!important}
+.semester-notice p,.semester-notice .notice-dari{color:#5D6C72!important}
+.dashboard{background:#F5F3EE!important;color:#1D2D3A!important}
+.workspace-side{border-right:1px solid var(--line)!important}
+.workspace-nav{color:#5E7180!important}
+.workspace-nav.active{background:#E9EEF0!important;color:#183B56!important;box-shadow:inset 3px 0 #B58A4A!important}
+.workspace-nav.active .nav-ico{background:#DCE6E9!important;color:#183B56!important}
+.workspace-topline h1,.workspace-page-title{color:#1D3446!important}
+.portal-hero{box-shadow:0 14px 32px rgba(24,59,86,.14)!important}
+.workspace-stat strong{color:#183B56!important}
+.activity-tag,.status{background:#E7EEE9!important;color:#35634E!important}
+.progress-line{background:#E8E7E1!important}
+.progress-line i,.progress i{background:#B58A4A!important}
+.quick-action{background:#FAF9F6!important;border-color:#E4E0D7!important;color:#345064!important}
+.quick-action span{color:#96713D!important}
+.week-day{background:#F1F0EB!important;color:#7A8790!important}
+.week-day b{color:#40596B!important}
+.week-day.today{background:#E4EBED!important;color:#183B56!important}
+.week-day.today b{color:#183B56!important}
+.modal-wrap{background:rgba(13,29,42,.68)!important}
+.field input,.field select{background:#FAFAF8!important;border-color:#D8DEE0!important;color:#1D2D3A!important}
+.field input:focus,.field select:focus{border-color:#7896A4!important}
+.hint{background:#F0EEE8!important;color:#52636E!important}
+.toast{background:#183B56!important;color:#fff!important}
+[data-theme="dark"]{
+ --ink:#EDF1F3;--muted:#B3C0C8;--paper:#111D29;--white:#1B2B39;--line:#344553;
+ --forest:#D8C49A;--green:#AFC4CF;--mint:#263A49;--lime:#D8C49A;--gold:#D8B978;
+ color-scheme:dark;
+}
+[data-theme="dark"] body,[data-theme="dark"] .dashboard{background:#111D29!important;color:#EDF1F3!important}
+[data-theme="dark"] .topbar,[data-theme="dark"] .dashbar,[data-theme="dark"] .workspace-side,
+[data-theme="dark"] .feature,[data-theme="dark"] .portal,[data-theme="dark"] .library-row,
+[data-theme="dark"] .schedule-card,[data-theme="dark"] .intake-countdown,
+[data-theme="dark"] .intake-class-card,[data-theme="dark"] .workspace-card,
+[data-theme="dark"] .workspace-stat,[data-theme="dark"] .stat,[data-theme="dark"] .panel,
+[data-theme="dark"] .sidebar,[data-theme="dark"] .modal,[data-theme="dark"] .date-chip{
+ background:#1B2B39!important;color:#EDF1F3!important;border-color:#344553!important;box-shadow:none!important
+}
+[data-theme="dark"] .brandname,[data-theme="dark"] .feature h3,[data-theme="dark"] .portal h3,
+[data-theme="dark"] .library-row h3,[data-theme="dark"] .card-heading h3,
+[data-theme="dark"] .activity-copy b,[data-theme="dark"] .workspace-page-title,
+[data-theme="dark"] .workspace-topline h1,[data-theme="dark"] .dashmain h1,
+[data-theme="dark"] .schedule-card h3,[data-theme="dark"] .intake-class-card h3,
+[data-theme="dark"] .intake-meta b,[data-theme="dark"] .intake-heading h2,
+[data-theme="dark"] .purpose-secondary h2{color:#EDF1F3!important}
+[data-theme="dark"] .brandname small,[data-theme="dark"] .nav a,
+[data-theme="dark"] .sub,[data-theme="dark"] .welcome-sub,[data-theme="dark"] .feature p,
+[data-theme="dark"] .portal p,[data-theme="dark"] .library-row p,
+[data-theme="dark"] .section-head p,[data-theme="dark"] .intro-copy p,
+[data-theme="dark"] .principle p,[data-theme="dark"] .schedule-card p,
+[data-theme="dark"] .intake-class-card p,[data-theme="dark"] .intake-heading p,
+[data-theme="dark"] .intake-footnote,[data-theme="dark"] .intake-meta small,
+[data-theme="dark"] .activity-copy small,[data-theme="dark"] .workspace-page-intro,
+[data-theme="dark"] .stat span{color:#B3C0C8!important}
+[data-theme="dark"] .mark,[data-theme="dark"] .topbar .mark{background:#D8C49A!important;color:#172A39!important}
+[data-theme="dark"] .hero,[data-theme="dark"] .purpose-main,[data-theme="dark"] .closing-section,
+[data-theme="dark"] .programme-cta,[data-theme="dark"] .side-bottom,
+[data-theme="dark"] .portal-hero{background:linear-gradient(118deg,#0C1925,#19364A)!important}
+[data-theme="dark"] .hero h1,[data-theme="dark"] .hero .eyebrow,
+[data-theme="dark"] .hero p,[data-theme="dark"] .hero-note,
+[data-theme="dark"] .purpose-main h2,[data-theme="dark"] .purpose-main p,
+[data-theme="dark"] .closing-section h2,[data-theme="dark"] .closing-section p,
+[data-theme="dark"] .programme-cta h3,[data-theme="dark"] .programme-cta p{color:#EDF1F3!important}
+[data-theme="dark"] .hero h1 span{color:#D8C49A!important}
+[data-theme="dark"] .portal-band,[data-theme="dark"] .purpose-section,
+[data-theme="dark"] .learning-section,[data-theme="dark"] .course-method,
+[data-theme="dark"] .intake-section{background:#152331!important}
+[data-theme="dark"] .feature-icon,[data-theme="dark"] .book-icon,
+[data-theme="dark"] .activity-icon,[data-theme="dark"] .workspace-stat .stat-icon,
+[data-theme="dark"] .workspace-nav .nav-ico{background:#263D4D!important;color:#D8C49A!important}
+[data-theme="dark"] .workspace-nav{color:#B3C0C8!important}
+[data-theme="dark"] .workspace-nav.active{background:#263D4D!important;color:#F1E5C9!important;box-shadow:inset 3px 0 #D8C49A!important}
+[data-theme="dark"] .workspace-nav.active .nav-ico{background:#344D5D!important;color:#F1E5C9!important}
+[data-theme="dark"] .workspace-stat strong,[data-theme="dark"] .intake-countdown strong{color:#F1E5C9!important}
+[data-theme="dark"] .intake-pill{background:#2A4050!important;color:#D5E0E5!important}
+[data-theme="dark"] .intake-pill.free,[data-theme="dark"] .status{background:#29463D!important;color:#C5E2D1!important}
+[data-theme="dark"] .intake-join-bar{background:#223847!important;border-color:#3A5260!important}
+[data-theme="dark"] .intake-join-bar b{color:#EDF1F3!important}
+[data-theme="dark"] .intake-join-bar span{color:#B3C0C8!important}
+[data-theme="dark"] .schedule-table th{background:#D8C49A!important;color:#172A39!important}
+[data-theme="dark"] .schedule-table td{color:#CBD5DA!important;border-color:#344553!important}
+[data-theme="dark"] .off-day{color:#D8C49A!important}
+[data-theme="dark"] .semester-notice{background:#223847!important;border-color:#3A5260!important;border-left-color:#D8C49A!important;color:#EDF1F3!important}
+[data-theme="dark"] .semester-notice p,[data-theme="dark"] .semester-notice .notice-dari{color:#C5D0D6!important}
+[data-theme="dark"] .btn-green,[data-theme="dark"] .btn.btn-green{background:#D8C49A!important;color:#172A39!important;border-color:#D8C49A!important}
+[data-theme="dark"] .btn-outline{background:transparent!important;color:#EDF1F3!important;border-color:#526574!important}
+[data-theme="dark"] .btn-light{background:#E9E1D1!important;color:#1A3042!important}
+[data-theme="dark"] .quick-action{background:#203544!important;border-color:#3A5260!important;color:#D5E0E5!important}
+[data-theme="dark"] .quick-action span{color:#D8C49A!important}
+[data-theme="dark"] .week-day{background:#223442!important;color:#AAB9C2!important}
+[data-theme="dark"] .week-day b{color:#D5E0E5!important}
+[data-theme="dark"] .week-day.today{background:#30495A!important;color:#F1E5C9!important}
+[data-theme="dark"] .week-day.today b{color:#F1E5C9!important}
+[data-theme="dark"] .field input,[data-theme="dark"] .field select{background:#152331!important;border-color:#405563!important;color:#EDF1F3!important}
+[data-theme="dark"] .hint{background:#263B49!important;color:#D5E0E5!important}
+[data-theme="dark"] .toast{background:#D8C49A!important;color:#172A39!important}
+[data-theme="dark"] .footer{background:#0B1620!important;color:#E5EBEE!important}
+[data-theme="dark"] .footer small{color:#AAB9C2!important}
+@media(max-width:700px){.topbar{background:#fff!important}[data-theme="dark"] .topbar{background:#1B2B39!important}}
+</style>
 </head>
 <body>
 <div class="shell" id="publicSite">
