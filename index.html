@@ -1713,5 +1713,73 @@ body[data-theme="dark"] :is(a,button,input,select,textarea,[tabindex]):focus-vis
 @media(prefers-reduced-motion:no-preference){
   body[data-theme="light"] :is(.btn,.feature,.portal){transition:background .2s ease,border-color .2s ease,transform .2s ease}
 }
+
+/* Higher-specificity legacy GED selectors are normalized here as well. */
+body[data-theme="dark"] #ged-courses,
+body[data-theme="dark"] #ged-courses :is(.section-head,.ged-subject-grid,#gedPublicLessons){
+  background:var(--aurevia-deep-navy)!important;
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] #ged-courses :is(.ged-subject-card,.public-lesson,.public-lesson-head,.lesson-content,.empty-state){
+  background:var(--aurevia-navy)!important;
+  background-image:none!important;
+  border:1px solid var(--aurevia-gold)!important;
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] #ged-courses :is(h1,h2,h3,h4,h5,h6,p,span,small,strong,b,li,label,summary,a,.eyebrow,.subject-code,.subject-meta){
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] #ged-courses :is(.eyebrow,.subject-code,.subject-meta){
+  color:var(--aurevia-soft-gold)!important;
+}
+body[data-theme="dark"] #ged-courses .schedule-table th{
+  background:var(--aurevia-soft-gold)!important;
+  color:var(--aurevia-deep-navy)!important;
+  border-color:var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] #ged-courses .schedule-table td{
+  background:var(--aurevia-navy)!important;
+  color:var(--aurevia-cream)!important;
+  border-color:var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] #ged-courses :is(button,.btn,.activity-tag,a.btn){
+  background:var(--aurevia-soft-gold)!important;
+  color:var(--aurevia-deep-navy)!important;
+  border:1px solid var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card,article){
+  background:var(--aurevia-navy)!important;
+  background-image:none!important;
+  border:1px solid var(--aurevia-gold)!important;
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] .programme-section :is(h2,h3,h4,p,small,span,strong,b,td,th){
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] .programme-section :is(.eyebrow,.subject-no,.roadmap-item>span,.programme-fact span){
+  color:var(--aurevia-soft-gold)!important;
+}
+body[data-theme="dark"] .programme-section .schedule-table th{
+  background:var(--aurevia-soft-gold)!important;
+  color:var(--aurevia-deep-navy)!important;
+  border-color:var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] .programme-section .schedule-table td{
+  background:var(--aurevia-navy)!important;
+  color:var(--aurevia-cream)!important;
+  border-color:var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] .programme-section .programme-cta{
+  background:var(--aurevia-deep-navy)!important;
+  border:1px solid var(--aurevia-gold)!important;
+}
+body[data-theme="dark"] .programme-section .programme-cta :is(h3,p){
+  color:var(--aurevia-cream)!important;
+}
+body[data-theme="dark"] .programme-section :is(.programme-cta .btn,.tool-card .path-icon){
+  background:var(--aurevia-soft-gold)!important;
+  color:var(--aurevia-deep-navy)!important;
+  border:1px solid var(--aurevia-gold)!important;
+}
 </style>
 </body></html>
