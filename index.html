@@ -1438,4 +1438,27 @@ body{background:var(--paper)!important;color:var(--ink)!important}
  update();setInterval(update,60000);
 })();
 </script>
+<style id="aurevia-readability-fix">
+/* Final, high-contrast text layer. Text contrast takes priority over decorative tinting. */
+body[data-theme="light"]{background:#F7F6F2!important;color:#172B3A!important}
+body[data-theme="light"] :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i,td,th,dt,dd,blockquote,figcaption,summary,legend,output){color:#172B3A!important}
+body[data-theme="light"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i){color:#FFFFFF!important}
+body[data-theme="light"] .hero h1 span{color:#F2D49A!important}
+body[data-theme="light"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) a{text-decoration:underline;text-underline-offset:3px}
+body[data-theme="light"] :is(.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn){background:#173B56!important;color:#FFFFFF!important;border-color:#173B56!important}
+body[data-theme="light"] :is(.btn-outline,.btn-light,.quick-action,.activity-tag,.intake-pill,.status){color:#172B3A!important}
+body[data-theme="light"] :is(input,select,textarea){background:#FFFFFF!important;color:#172B3A!important;border-color:#657783!important}
+body[data-theme="light"] ::placeholder{color:#52616C!important;opacity:1}
+body[data-theme="light"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#172B3A!important}
+body[data-theme="dark"]{background:#111C27!important;color:#F4F6F8!important}
+body[data-theme="dark"] :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i,td,th,dt,dd,blockquote,figcaption,summary,legend,output){color:#F0F3F5!important}
+body[data-theme="dark"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i){color:#F5F7F8!important}
+body[data-theme="dark"] .hero h1 span{color:#F2D49A!important}
+body[data-theme="dark"] :is(.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn){background:#E4C98F!important;color:#172B3A!important;border-color:#E4C98F!important}
+body[data-theme="dark"] :is(.btn-outline,.btn-light,.quick-action,.activity-tag,.intake-pill,.status){color:#F0F3F5!important}
+body[data-theme="dark"] :is(input,select,textarea){background:#172633!important;color:#F4F6F8!important;border-color:#718391!important}
+body[data-theme="dark"] ::placeholder{color:#C5D0D8!important;opacity:1}
+body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#F0F3F5!important}
+body :is(a,button,input,select,textarea):focus-visible{outline:3px solid #B58A4A!important;outline-offset:3px!important}
+</style>
 </body></html>
