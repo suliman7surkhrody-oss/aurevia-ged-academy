@@ -1461,4 +1461,58 @@ body[data-theme="dark"] ::placeholder{color:#C5D0D8!important;opacity:1}
 body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#F0F3F5!important}
 body :is(a,button,input,select,textarea):focus-visible{outline:3px solid #B58A4A!important;outline-offset:3px!important}
 </style>
+/* Programme cards: explicit readable pairings in both themes. */
+body[data-theme="light"] .programme-section .programme-fact,
+body[data-theme="light"] .programme-section .programme-subject,
+body[data-theme="light"] .programme-section .subject-pattern,
+body[data-theme="light"] .programme-section .roadmap-item,
+body[data-theme="light"] .programme-section .tool-card{
+  background:#FFFFFF!important;border-color:#D9E0E3!important;color:#172B3A!important;
+}
+body[data-theme="light"] .programme-section .programme-fact *,
+body[data-theme="light"] .programme-section .programme-subject *,
+body[data-theme="light"] .programme-section .subject-pattern *,
+body[data-theme="light"] .programme-section .roadmap-item *,
+body[data-theme="light"] .programme-section .tool-card *{
+  color:#263D4C!important;
+}
+body[data-theme="light"] .programme-section .programme-subject .subject-no,
+body[data-theme="light"] .programme-section .roadmap-item>span{color:#8A6036!important}
+body[data-theme="light"] .programme-section .programme-subject h3,
+body[data-theme="light"] .programme-section .subject-pattern h4,
+body[data-theme="light"] .programme-section .roadmap-item h4,
+body[data-theme="light"] .programme-section .tool-card strong{color:#172B3A!important}
+body[data-theme="light"] .programme-section .programme-subject p,
+body[data-theme="light"] .programme-section .subject-pattern p,
+body[data-theme="light"] .programme-section .roadmap-item p,
+body[data-theme="light"] .programme-section .tool-card p,
+body[data-theme="light"] .programme-section .programme-fact span{color:#52616C!important}
+
+body[data-theme="dark"] .programme-section .programme-fact,
+body[data-theme="dark"] .programme-section .programme-subject,
+body[data-theme="dark"] .programme-section .subject-pattern,
+body[data-theme="dark"] .programme-section .roadmap-item,
+body[data-theme="dark"] .programme-section .tool-card{
+  background:#263A49!important;border:1px solid #405565!important;color:#F0F3F5!important;
+}
+body[data-theme="dark"] .programme-section .programme-fact *,
+body[data-theme="dark"] .programme-section .programme-subject *,
+body[data-theme="dark"] .programme-section .subject-pattern *,
+body[data-theme="dark"] .programme-section .roadmap-item *,
+body[data-theme="dark"] .programme-section .tool-card *{
+  color:#EAF0F3!important;
+}
+body[data-theme="dark"] .programme-section .programme-subject .subject-no,
+body[data-theme="dark"] .programme-section .roadmap-item>span{color:#E4C98F!important}
+body[data-theme="dark"] .programme-section .programme-subject h3,
+body[data-theme="dark"] .programme-section .subject-pattern h4,
+body[data-theme="dark"] .programme-section .roadmap-item h4,
+body[data-theme="dark"] .programme-section .tool-card strong,
+body[data-theme="dark"] .programme-section .programme-fact b{color:#FFFFFF!important}
+body[data-theme="dark"] .programme-section .programme-subject p,
+body[data-theme="dark"] .programme-section .subject-pattern p,
+body[data-theme="dark"] .programme-section .roadmap-item p,
+body[data-theme="dark"] .programme-section .tool-card p,
+body[data-theme="dark"] .programme-section .programme-fact span{color:#C6D2D9!important}
+
 </body></html>
