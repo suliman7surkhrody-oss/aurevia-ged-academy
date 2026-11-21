@@ -1439,265 +1439,53 @@ body{background:var(--paper)!important;color:var(--ink)!important}
 })();
 </script>
 <style id="aurevia-readability-fix">
-/* Final, high-contrast text layer. Text contrast takes priority over decorative tinting. */
-body[data-theme="light"]{background:#F7F6F2!important;color:#172B3A!important}
-body[data-theme="light"] :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i,td,th,dt,dd,blockquote,figcaption,summary,legend,output){color:#172B3A!important}
-body[data-theme="light"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i){color:#FFFFFF!important}
-body[data-theme="light"] .hero h1 span{color:#F2D49A!important}
-body[data-theme="light"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) a{text-decoration:underline;text-underline-offset:3px}
-body[data-theme="light"] :is(.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn){background:#173B56!important;color:#FFFFFF!important;border-color:#173B56!important}
-body[data-theme="light"] :is(.btn-outline,.btn-light,.quick-action,.activity-tag,.intake-pill,.status){color:#172B3A!important}
-body[data-theme="light"] :is(input,select,textarea){background:#FFFFFF!important;color:#172B3A!important;border-color:#657783!important}
-body[data-theme="light"] ::placeholder{color:#52616C!important;opacity:1}
-body[data-theme="light"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#172B3A!important}
-body[data-theme="dark"]{background:#111C27!important;color:#F4F6F8!important}
-body[data-theme="dark"] :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i,td,th,dt,dd,blockquote,figcaption,summary,legend,output){color:#F0F3F5!important}
-body[data-theme="dark"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i){color:#F5F7F8!important}
-body[data-theme="dark"] .hero h1 span{color:#F2D49A!important}
-body[data-theme="dark"] :is(.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn){background:#E4C98F!important;color:#172B3A!important;border-color:#E4C98F!important}
-body[data-theme="dark"] :is(.btn-outline,.btn-light,.quick-action,.activity-tag,.intake-pill,.status){color:#F0F3F5!important}
-body[data-theme="dark"] :is(input,select,textarea){background:#172633!important;color:#F4F6F8!important;border-color:#718391!important}
-body[data-theme="dark"] ::placeholder{color:#C5D0D8!important;opacity:1}
-body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#F0F3F5!important}
+
+/* Dark mode only: navy surfaces, bold white text, champagne-gold structure. */
+body[data-theme="dark"]{background:#102B43!important;color:#FFFFFF!important}
+body[data-theme="dark"] :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i,td,th,dt,dd,blockquote,figcaption,summary,legend,output){color:#F4F6F8!important;font-weight:700}
+body[data-theme="dark"] :is(.hero,.purpose-main,.closing-section,.programme-cta,.side-bottom,.portal-hero,.footer) :is(h1,h2,h3,h4,h5,h6,p,span,a,li,label,small,strong,b,em,i){color:#FFFFFF!important}
+body[data-theme="dark"] .hero h1 span{color:#E2C99B!important}
+body[data-theme="dark"] :is(.btn-green,.btn.btn-green,.intake-card-action .btn,.portal button.btn){background:#E2C99B!important;color:#102B43!important;border-color:#E2C99B!important}
+body[data-theme="dark"] :is(.btn-outline,.btn-light,.quick-action,.activity-tag,.intake-pill,.status){color:#F4F6F8!important}
+body[data-theme="dark"] :is(input,select,textarea){background:#193A55!important;color:#FFFFFF!important;border-color:#C6A15B!important}
+body[data-theme="dark"] ::placeholder{color:#D8E0E7!important;opacity:1}
+body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip){background:#193A55!important;border-color:#C6A15B!important}
+body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#F4F6F8!important}
+body[data-theme="dark"] .programme-section,
+body[data-theme="dark"] .programme-section .programme-wrap,
+body[data-theme="dark"] .programme-section .programme-subjects,
+body[data-theme="dark"] .programme-section .subject-patterns,
+body[data-theme="dark"] .programme-section .roadmap,
+body[data-theme="dark"] .programme-section .tool-row,
+body[data-theme="dark"] #ged-courses,
+body[data-theme="dark"] #ged-courses :is(.section-head,.ged-subject-grid,#gedPublicLessons){background:#102B43!important;color:#FFFFFF!important}
+body[data-theme="dark"] .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card,article),
+body[data-theme="dark"] #ged-courses :is(.ged-subject-card,.public-lesson,.public-lesson-head,.lesson-content,.empty-state){
+  background:#193A55!important;background-image:none!important;border:2px solid #C6A15B!important;color:#FFFFFF!important;box-shadow:none!important;border-radius:15px!important
+}
+body[data-theme="dark"] .programme-section :is(h2,h3,h4,p,small,span,strong,b,td,th),
+body[data-theme="dark"] #ged-courses :is(h1,h2,h3,h4,h5,h6,p,span,small,strong,b,li,label,summary,a){color:#F4F6F8!important;font-weight:750!important}
+body[data-theme="dark"] .programme-section :is(.eyebrow,.subject-no,.roadmap-item>span,.programme-fact span),
+body[data-theme="dark"] #ged-courses :is(.eyebrow,.subject-code,.subject-meta){color:#E2C99B!important;font-weight:850!important}
+body[data-theme="dark"] .programme-section .schedule-table th,
+body[data-theme="dark"] #ged-courses .schedule-table th{background:#E2C99B!important;color:#102B43!important;border-color:#C6A15B!important}
+body[data-theme="dark"] .programme-section .schedule-table td,
+body[data-theme="dark"] #ged-courses .schedule-table td{background:#193A55!important;color:#FFFFFF!important;border-color:#C6A15B!important}
+body[data-theme="dark"] .programme-section .programme-cta{background:#0B2237!important;border:2px solid #C6A15B!important}
+body[data-theme="dark"] .programme-section .programme-cta :is(h3,p){color:#FFFFFF!important}
+body[data-theme="dark"] .programme-section .programme-cta .btn,
+body[data-theme="dark"] .programme-section .tool-card .path-icon,
+body[data-theme="dark"] #ged-courses :is(button,.btn,.activity-tag,a.btn){background:#E2C99B!important;color:#102B43!important;border:2px solid #E2C99B!important;font-weight:850!important}
+body[data-theme="dark"] #ged-courses{border-top:3px solid #C6A15B!important;border-bottom:3px solid #C6A15B!important}
+body[data-theme="dark"] #ged-courses [hidden]{display:none!important}
 body :is(a,button,input,select,textarea):focus-visible{outline:3px solid #B58A4A!important;outline-offset:3px!important}
 
 </style>
-<style id="aurevia-programme-navy-gold">
-/* One consistent academy treatment: deep navy surfaces, bold white type, gold structure. */
-body .programme-section{
-  background:#102B43!important;color:#FFFFFF!important;
-}
-body .programme-section :is(.section-head h2,.section-head p,.eyebrow){
-  color:#FFFFFF!important;font-weight:750!important;
-}
-body .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card){
-  background:#193A55!important;
-  border:2px solid #C6A15B!important;
-  color:#FFFFFF!important;
-  box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
-}
-body .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card) *{
-  color:#FFFFFF!important;
-  font-weight:700!important;
-}
-body .programme-section :is(h2,h3,h4,strong,b,.programme-fact b,.tool-card strong){
-  color:#FFFFFF!important;font-weight:800!important;
-}
-body .programme-section :is(p,small,span,td,th){
-  color:#F4F6F8!important;font-weight:650!important;
-}
-body .programme-section :is(.subject-no,.roadmap-item>span,.programme-fact span){
-  color:#F0D49A!important;font-weight:800!important;
-}
-body .programme-section .schedule-table-wrap{
-  border:1px solid #C6A15B!important;border-radius:12px;overflow:hidden;
-}
-body .programme-section .schedule-table th{
-  background:#C6A15B!important;color:#142D43!important;font-weight:800!important;
-}
-body .programme-section .schedule-table td{
-  background:#193A55!important;color:#FFFFFF!important;border-color:#C6A15B!important;
-}
-body .programme-section .schedule-table .off-day{
-  color:#F0D49A!important;font-weight:800!important;
-}
-body .programme-section .programme-cta{
-  background:#0B2237!important;border:2px solid #C6A15B!important;
-}
-body .programme-section .programme-cta :is(h3,p){color:#FFFFFF!important;font-weight:750!important}
-body .programme-section .programme-cta .btn{
-  background:#C6A15B!important;color:#142D43!important;border:2px solid #E2C47F!important;font-weight:800!important;
-}
-body .programme-section .tool-card .path-icon{
-  background:#C6A15B!important;color:#142D43!important;border:1px solid #E2C47F!important;
-}
-body .programme-section :is(.programme-subject,.subject-pattern,.roadmap-item,.tool-card,.programme-fact,.schedule-card){
-  border-radius:15px!important;
-}
-</style>
 
-<style id="aurevia-remove-cream-surfaces">
-/* Force every visible GED programme card and inner panel to navy; no cream card fills. */
-html body .programme-section,
-html body .programme-section .programme-wrap,
-html body .programme-section .programme-subjects,
-html body .programme-section .subject-patterns,
-html body .programme-section .roadmap,
-html body .programme-section .tool-row{
-  background:#102B43!important;color:#FFFFFF!important;
-}
-html body .programme-section article,
-html body .programme-section .programme-fact,
-html body .programme-section .programme-subject,
-html body .programme-section .schedule-card,
-html body .programme-section .subject-pattern,
-html body .programme-section .roadmap-item,
-html body .programme-section .tool-card,
-html body .programme-section .schedule-table-wrap{
-  background:#193A55!important;
-  background-image:none!important;
-  border:2px solid #C6A15B!important;
-  color:#FFFFFF!important;
-}
-html body .programme-section article *,
-html body .programme-section .programme-fact *,
-html body .programme-section .schedule-card *,
-html body .programme-section .tool-card *{
-  color:#FFFFFF!important;
-  font-weight:700!important;
-}
-html body .programme-section :is(h1,h2,h3,h4,h5,h6,strong,b){
-  color:#FFFFFF!important;font-weight:800!important;
-}
-html body .programme-section :is(.eyebrow,.subject-no,.roadmap-item>span,.programme-fact span){
-  color:#F0D49A!important;font-weight:800!important;
-}
-html body .programme-section :is(.programme-subject p,.subject-pattern p,.roadmap-item p,.tool-card p,.schedule-card>p,.programme-fact span){
-  color:#F4F6F8!important;font-weight:650!important;
-}
-html body .programme-section .schedule-table th{
-  background:#C6A15B!important;color:#142D43!important;border-color:#C6A15B!important;font-weight:800!important;
-}
-html body .programme-section .schedule-table td{
-  background:#193A55!important;color:#FFFFFF!important;border-color:#C6A15B!important;font-weight:700!important;
-}
-html body .programme-section .programme-cta{
-  background:#0B2237!important;border:2px solid #C6A15B!important;
-}
-html body .programme-section .programme-cta :is(h3,p){color:#FFFFFF!important}
-html body .programme-section .programme-cta .btn,
-html body .programme-section .path-icon{
-  background:#C6A15B!important;color:#142D43!important;border:2px solid #E2C47F!important;font-weight:800!important;
-}
-</style>
 
-<style id="aurevia-ged-course-full-navy-gold">
-/* Entire public GED course explorer, including expanded subject lessons. */
-html body #ged-courses{
-  background:#102B43!important;
-  color:#FFFFFF!important;
-  border-top:3px solid #C6A15B!important;
-  border-bottom:3px solid #C6A15B!important;
-}
-html body #ged-courses :is(.section-head,.ged-subject-grid,#gedPublicLessons){
-  background:#102B43!important;color:#FFFFFF!important;
-}
-html body #ged-courses :is(h1,h2,h3,h4,h5,h6,p,span,small,strong,b,li,label,summary,a,.subject-meta,.subject-code){
-  color:#FFFFFF!important;
-  font-weight:750!important;
-}
-html body #ged-courses .eyebrow,
-html body #ged-courses .subject-code,
-html body #ged-courses .subject-meta{
-  color:#F0D49A!important;font-weight:800!important;
-}
-html body #ged-courses :is(.ged-subject-card,.public-lesson,.public-lesson-head,.lesson-content,.empty-state){
-  background:#193A55!important;
-  background-image:none!important;
-  color:#FFFFFF!important;
-  border:2px solid #C6A15B!important;
-  border-radius:15px!important;
-  box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
-}
-html body #ged-courses .ged-subject-card *,
-html body #ged-courses .public-lesson *,
-html body #ged-courses .public-lesson-head *,
-html body #ged-courses .lesson-content *{
-  color:#FFFFFF!important;font-weight:700!important;
-}
-html body #ged-courses :is(.ged-subject-card h3,.public-lesson h4,.public-lesson-head h3){
-  color:#FFFFFF!important;font-weight:850!important;
-}
-html body #ged-courses :is(.ged-subject-card p,.public-lesson p,.lesson-content){
-  color:#F4F6F8!important;font-weight:700!important;line-height:1.75!important;
-}
-html body #ged-courses :is(button,.btn,.activity-tag,a.btn){
-  background:#193A55!important;
-  color:#FFFFFF!important;
-  border:2px solid #C6A15B!important;
-  font-weight:800!important;
-}
-html body #ged-courses :is(button,.btn):hover{
-  background:#244B68!important;border-color:#E2C47F!important;
-}
-html body #ged-courses .public-lesson-head{
-  border-bottom:2px solid #C6A15B!important;
-}
-html body #ged-courses :is(.ged-subject-card,.public-lesson) :is(hr,li){
-  border-color:#C6A15B!important;
-}
-html body #ged-courses [hidden]{display:none!important}
-</style>
 
-<style id="aurevia-global-navy-gold-theme">
-/* AUREVIA global identity: deep navy, bold white typography, warm champagne gold. */
-:root{
-  --forest:#102B43!important;--green:#193A55!important;
-  --mint:#193A55!important;--lime:#E2C99B!important;
-  --ink:#FFFFFF!important;--muted:#E5EAF0!important;
-  --paper:#102B43!important;--white:#193A55!important;
-  --line:#C6A15B!important;--gold:#E2C99B!important;
-  --surface:#193A55!important;--surface-soft:#193A55!important;
-  --text:#FFFFFF!important;--text-muted:#E5EAF0!important;
-  --accent:#E2C99B!important;
-}
-html body,html body .shell,html body main{
-  background:#102B43!important;color:#FFFFFF!important;
-}
-html body :is(header,.topbar,nav,.nav,.section,.section-head,.intro-section,
-.intro-grid,.intro-copy,.community-section,.whatsapp-home,.whatsapp-community,
-.library-section,.library-row,.footer,.closing-section,.closing-inner,
-.intake-section,.intake-wrap,.programme-section,.ged-public-section,
-#about,#ged-courses,#english-courses,#live-classes,#programme){
-  background:#102B43!important;color:#FFFFFF!important;
-}
-html body :is(article,.card,.feature-card,.purpose-card,.promise-card,.pathway,
-.pathway-card,.stat-card,.portal-card,.library-source,.public-resource,
-.ged-subject-card,.course-detail-card,.programme-fact,.programme-subject,
-.schedule-card,.subject-pattern,.roadmap-item,.tool-card,.public-lesson,
-.live-record,.semester-notice,.english-course-note,.community-chat,
-.chat-feed,.chat-message,.live-form,.modal,.modal-content,.panel,.dashboard-card){
-  background:#193A55!important;
-  background-image:none!important;
-  color:#FFFFFF!important;
-  border:2px solid #C6A15B!important;
-  box-shadow:none!important;
-}
-html body :is(h1,h2,h3,h4,h5,h6,p,span,small,strong,b,li,label,
-a:not(.btn),td,th,summary,dt,dd,.eyebrow,.lead,.subject-meta,.subject-code){
-  color:#FFFFFF!important;font-weight:750!important;
-}
-html body :is(.hero h1 span,.eyebrow,.subject-code,.subject-meta,
-.subject-no,.roadmap-item>span,.programme-fact span,.source-meta){
-  color:#E2C99B!important;font-weight:850!important;
-}
-html body :is(button,.btn,input[type="submit"],input[type="button"]){
-  background:#193A55!important;color:#FFFFFF!important;
-  border:2px solid #E2C99B!important;font-weight:850!important;
-}
-html body :is(.btn-primary,.btn-green,.btn-light,.top-actions .btn:last-child){
-  background:#E2C99B!important;color:#102B43!important;
-  border:2px solid #E2C99B!important;font-weight:850!important;
-}
-html body :is(input,textarea,select){
-  background:#102B43!important;color:#FFFFFF!important;
-  border:1px solid #C6A15B!important;
-}
-html body input::placeholder,html body textarea::placeholder{color:#D8E0E7!important;opacity:1!important}
-html body :is(hr,.divider,.section-divider){border-color:#C6A15B!important}
-html body :is(table,thead,tbody,tr,td,th){border-color:#C6A15B!important}
-html body :is(.schedule-table th){background:#E2C99B!important;color:#102B43!important}
-html body :is(.schedule-table td){background:#193A55!important;color:#FFFFFF!important}
-html body a:hover,html body button:hover,html body .btn:hover{
-  border-color:#F0DBAF!important;
-}
-html body :is(.brandname,.brandname small,.nav a,.topbar .nav a){color:#FFFFFF!important}
-html body .mark{background:#193A55!important;color:#E2C99B!important;border:1px solid #E2C99B!important}
-html body .hero,html body .hero-inner,html body .hero-copy,
-html body .hero-visual,html body .closing-inner{
-  background:#102B43!important;
-}
-html body .hero h1 span{color:#E2C99B!important}
-html body [hidden]{display:none!important}
-</style>
+
+
+
+
 </body></html>
