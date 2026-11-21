@@ -1460,59 +1460,59 @@ body[data-theme="dark"] :is(input,select,textarea){background:#172633!important;
 body[data-theme="dark"] ::placeholder{color:#C5D0D8!important;opacity:1}
 body[data-theme="dark"] :is(.semester-notice,.intake-join-bar,.hint,.quick-action,.week-day,.intake-countdown,.intake-class-card,.feature,.portal,.library-row,.workspace-card,.workspace-stat,.schedule-card,.panel,.sidebar,.modal,.date-chip) :is(h1,h2,h3,h4,p,span,a,li,label,small,strong,b,em,td,th){color:#F0F3F5!important}
 body :is(a,button,input,select,textarea):focus-visible{outline:3px solid #B58A4A!important;outline-offset:3px!important}
+
 </style>
-/* Programme cards: explicit readable pairings in both themes. */
-body[data-theme="light"] .programme-section .programme-fact,
-body[data-theme="light"] .programme-section .programme-subject,
-body[data-theme="light"] .programme-section .subject-pattern,
-body[data-theme="light"] .programme-section .roadmap-item,
-body[data-theme="light"] .programme-section .tool-card{
-  background:#FFFFFF!important;border-color:#D9E0E3!important;color:#172B3A!important;
+<style id="aurevia-programme-navy-gold">
+/* One consistent academy treatment: deep navy surfaces, bold white type, gold structure. */
+body .programme-section{
+  background:#102B43!important;color:#FFFFFF!important;
 }
-body[data-theme="light"] .programme-section .programme-fact *,
-body[data-theme="light"] .programme-section .programme-subject *,
-body[data-theme="light"] .programme-section .subject-pattern *,
-body[data-theme="light"] .programme-section .roadmap-item *,
-body[data-theme="light"] .programme-section .tool-card *{
-  color:#263D4C!important;
+body .programme-section :is(.section-head h2,.section-head p,.eyebrow){
+  color:#FFFFFF!important;font-weight:750!important;
 }
-body[data-theme="light"] .programme-section .programme-subject .subject-no,
-body[data-theme="light"] .programme-section .roadmap-item>span{color:#8A6036!important}
-body[data-theme="light"] .programme-section .programme-subject h3,
-body[data-theme="light"] .programme-section .subject-pattern h4,
-body[data-theme="light"] .programme-section .roadmap-item h4,
-body[data-theme="light"] .programme-section .tool-card strong{color:#172B3A!important}
-body[data-theme="light"] .programme-section .programme-subject p,
-body[data-theme="light"] .programme-section .subject-pattern p,
-body[data-theme="light"] .programme-section .roadmap-item p,
-body[data-theme="light"] .programme-section .tool-card p,
-body[data-theme="light"] .programme-section .programme-fact span{color:#52616C!important}
-
-body[data-theme="dark"] .programme-section .programme-fact,
-body[data-theme="dark"] .programme-section .programme-subject,
-body[data-theme="dark"] .programme-section .subject-pattern,
-body[data-theme="dark"] .programme-section .roadmap-item,
-body[data-theme="dark"] .programme-section .tool-card{
-  background:#263A49!important;border:1px solid #405565!important;color:#F0F3F5!important;
+body .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card){
+  background:#193A55!important;
+  border:2px solid #C6A15B!important;
+  color:#FFFFFF!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.16)!important;
 }
-body[data-theme="dark"] .programme-section .programme-fact *,
-body[data-theme="dark"] .programme-section .programme-subject *,
-body[data-theme="dark"] .programme-section .subject-pattern *,
-body[data-theme="dark"] .programme-section .roadmap-item *,
-body[data-theme="dark"] .programme-section .tool-card *{
-  color:#EAF0F3!important;
+body .programme-section :is(.programme-fact,.programme-subject,.schedule-card,.subject-pattern,.roadmap-item,.tool-card) *{
+  color:#FFFFFF!important;
+  font-weight:700!important;
 }
-body[data-theme="dark"] .programme-section .programme-subject .subject-no,
-body[data-theme="dark"] .programme-section .roadmap-item>span{color:#E4C98F!important}
-body[data-theme="dark"] .programme-section .programme-subject h3,
-body[data-theme="dark"] .programme-section .subject-pattern h4,
-body[data-theme="dark"] .programme-section .roadmap-item h4,
-body[data-theme="dark"] .programme-section .tool-card strong,
-body[data-theme="dark"] .programme-section .programme-fact b{color:#FFFFFF!important}
-body[data-theme="dark"] .programme-section .programme-subject p,
-body[data-theme="dark"] .programme-section .subject-pattern p,
-body[data-theme="dark"] .programme-section .roadmap-item p,
-body[data-theme="dark"] .programme-section .tool-card p,
-body[data-theme="dark"] .programme-section .programme-fact span{color:#C6D2D9!important}
-
+body .programme-section :is(h2,h3,h4,strong,b,.programme-fact b,.tool-card strong){
+  color:#FFFFFF!important;font-weight:800!important;
+}
+body .programme-section :is(p,small,span,td,th){
+  color:#F4F6F8!important;font-weight:650!important;
+}
+body .programme-section :is(.subject-no,.roadmap-item>span,.programme-fact span){
+  color:#F0D49A!important;font-weight:800!important;
+}
+body .programme-section .schedule-table-wrap{
+  border:1px solid #C6A15B!important;border-radius:12px;overflow:hidden;
+}
+body .programme-section .schedule-table th{
+  background:#C6A15B!important;color:#142D43!important;font-weight:800!important;
+}
+body .programme-section .schedule-table td{
+  background:#193A55!important;color:#FFFFFF!important;border-color:#C6A15B!important;
+}
+body .programme-section .schedule-table .off-day{
+  color:#F0D49A!important;font-weight:800!important;
+}
+body .programme-section .programme-cta{
+  background:#0B2237!important;border:2px solid #C6A15B!important;
+}
+body .programme-section .programme-cta :is(h3,p){color:#FFFFFF!important;font-weight:750!important}
+body .programme-section .programme-cta .btn{
+  background:#C6A15B!important;color:#142D43!important;border:2px solid #E2C47F!important;font-weight:800!important;
+}
+body .programme-section .tool-card .path-icon{
+  background:#C6A15B!important;color:#142D43!important;border:1px solid #E2C47F!important;
+}
+body .programme-section :is(.programme-subject,.subject-pattern,.roadmap-item,.tool-card,.programme-fact,.schedule-card){
+  border-radius:15px!important;
+}
+</style>
 </body></html>
