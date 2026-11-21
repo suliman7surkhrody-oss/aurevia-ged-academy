@@ -9,7 +9,7 @@
 <meta name="application-name" content="AUREVIA GED ACADEMY">
 <meta name="author" content="AUREVIA GED ACADEMY">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://suliman7surkhrody-oss.github.io/aurevia-ged-academy/">
 <link rel="icon" type="image/svg+xml" href="assets/aurevia-mark.svg">
 <meta property="og:type" content="website">
@@ -1408,7 +1408,7 @@ body{background:var(--paper)!important;color:var(--ink)!important}
 <button class="text-action" type="button" id="authSwitch" onclick="ruyaAuthSwitch()">Create a student account</button>
 <p class="hint" id="authHint">New registrations receive student access only. AUREVIA management assigns teacher and management permissions after verifying staff identity.</p></div></div>
 <div class="toast" id="toast"></div>
-<script>(function(){const applyTheme=function(theme){const dark=theme==="dark";document.body.dataset.theme=dark?"dark":"light";document.documentElement.style.colorScheme=dark?"dark":"light";document.querySelectorAll("#themeTogglePublic,#themeTogglePortal").forEach(function(b){b.textContent=dark?"Light mode":"Dark mode";b.setAttribute("aria-pressed",dark?"true":"false");});};let saved="light";try{saved=localStorage.getItem("aurevia-theme")||"light";}catch(e){}applyTheme(saved==="dark"?"dark":"light");window.aureviaToggleTheme=function(){const next=document.body.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("aurevia-theme",next);}catch(e){}applyTheme(next);};})();</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>(function(){document.body.dataset.theme="light";document.documentElement.style.colorScheme="light";try{localStorage.setItem("aurevia-theme","light");}catch(e){}window.aureviaToggleTheme=function(){document.body.dataset.theme="light";document.documentElement.style.colorScheme="light";};})();</script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/supabase-config.js?v=20261110-3"></script>
 <script src="js/supabase-client.js?v=20261110-3"></script>
 <script src="js/app.js?v=20261117-2"></script>
@@ -1997,4 +1997,4 @@ body[data-theme="dark"] .programme-section :is(.eyebrow,.subject-no,.roadmap-ite
 body[data-theme="dark"] :is(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #D0B477!important;outline-offset:3px!important}
 </style>
 
-</body></html>
+\n<style id="aurevia-light-only-mode">\n/* Light mode only: keep the interface in light appearance and hide theme controls. */\nhtml{color-scheme:light!important}\nbody{color-scheme:light!important}\n.theme-toggle,#themeTogglePublic,#themeTogglePortal{display:none!important}\n</style>\n</body></html>
